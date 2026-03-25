@@ -85,21 +85,347 @@
                 </div>
                 <!-- Navigation Links -->
                 <div class="hidden xl:flex items-center gap-10 text-sm font-medium">
-                    <a class="hover:text-primary transition-colors flex items-center gap-1 group" href="#">
-                        Colleges
-                        <span
-                            class="material-symbols-outlined text-sm transition-transform duration-300 group-hover:rotate-180">expand_more</span>
-                    </a>
-                    <a class="hover:text-primary transition-colors flex items-center gap-1 group" href="#">
-                        Courses
-                        <span
-                            class="material-symbols-outlined text-sm transition-transform duration-300 group-hover:rotate-180">expand_more</span>
-                    </a>
-                    <a class="hover:text-primary transition-colors flex items-center gap-1 group" href="#">
-                        Exams
-                        <span
-                            class="material-symbols-outlined text-sm transition-transform duration-300 group-hover:rotate-180">expand_more</span>
-                    </a>
+                    <!-- Colleges Multi-Level Dropdown -->
+                    <div class="relative group/main">
+                        <button class="hover:text-primary transition-colors flex items-center gap-1 group-hover/main:text-primary py-4">
+                            Colleges
+                            <span class="material-symbols-outlined text-sm transition-transform duration-300 group-hover/main:rotate-180">expand_more</span>
+                        </button>
+                        <div class="absolute top-full left-0 pt-0 hidden group-hover/main:block transition-all duration-300 min-w-[200px] z-50">
+                            <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-visible border border-slate-200 dark:border-slate-800 mt-2">
+                                <!-- Gurugram -->
+                                <div class="relative group/sub">
+                                    <button class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item">
+                                        Gurugram <span class="material-symbols-outlined text-xs">chevron_right</span>
+                                    </button>
+                                    <div class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[220px]">
+                                        <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">SAITM</a>
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">IILM</a>
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">SOIL</a>
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">BML Munjal University</a>
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">GD Goenka University</a>
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">K.R. Mangalam University</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Delhi -->
+                                <div class="relative group/sub">
+                                    <button class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item">
+                                        Delhi <span class="material-symbols-outlined text-xs">chevron_right</span>
+                                    </button>
+                                    <div class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[200px]">
+                                        <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">IMM</a>
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">DBS</a>
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">NDIM</a>
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">Asia Pacific</a>
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">FOSTIIMA</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Pune -->
+                                <div class="relative group/sub">
+                                    <button class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item">
+                                        Pune <span class="material-symbols-outlined text-xs">chevron_right</span>
+                                    </button>
+                                    <div class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[200px]">
+                                        <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">RIIM</a>
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">ISMS</a>
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">Lexicon</a>
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">PIBM</a>
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">ASM</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Mumbai -->
+                                <div class="relative group/sub">
+                                    <button class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item">
+                                        Mumbai <span class="material-symbols-outlined text-xs">chevron_right</span>
+                                    </button>
+                                    <div class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[200px]">
+                                        <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">UBS</a>
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">ITM</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Dehradun -->
+                                <div class="relative group/sub">
+                                    <button class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item">
+                                        Dehradun <span class="material-symbols-outlined text-xs">chevron_right</span>
+                                    </button>
+                                    <div class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[200px]">
+                                        <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">UPES</a>
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">Graphic Era</a>
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">Doon Business School</a>
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">Quantum University</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Bangalore -->
+                                <div class="relative group/sub">
+                                    <button class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item">
+                                        Bangalore <span class="material-symbols-outlined text-xs">chevron_right</span>
+                                    </button>
+                                    <div class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[200px]">
+                                        <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">IIBS</a>
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">GIBS</a>
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">ISME</a>
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">ISBR</a>
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">IZee</a>
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">Alliance University</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Greater Noida -->
+                                <div class="relative group/sub">
+                                    <button class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item">
+                                        Greater Noida <span class="material-symbols-outlined text-xs">chevron_right</span>
+                                    </button>
+                                    <div class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[200px]">
+                                        <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">Lloyd</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">GNIOT</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">Mangalmay</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">GN Group</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">IIMT</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">Galgotias University</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">Bennett University</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">Sharda University</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">GBU (Gautam Buddha University)</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Noida -->
+                                <div class="relative group/sub">
+                                    <button class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item">
+                                        Noida <span class="material-symbols-outlined text-xs">chevron_right</span>
+                                    </button>
+                                    <div class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[200px]">
+                                        <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">IMS</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">NIU (Noida International University)</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">IILM</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Ghaziabad -->
+                                <div class="relative group/sub">
+                                    <button class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item">
+                                        Ghaziabad <span class="material-symbols-outlined text-xs">chevron_right</span>
+                                    </button>
+                                    <div class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[200px]">
+                                        <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">IMT</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">ABES</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">KIET</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">ITS</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">NIET</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">Accurate</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">KCC</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">HIMT</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">Dronacharya</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">RIG</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">IBMR</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <button class="hover:text-primary transition-colors flex items-center gap-1 group-hover:text-primary">
+                            Courses
+                            <span class="material-symbols-outlined text-sm transition-transform duration-300 group-hover:rotate-180">expand_more</span>
+                        </button>
+                        <div class="absolute top-full left-0 pt-4 hidden group-hover:block transition-all duration-300 min-w-[170px]">
+                            <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                                <a class="block px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold" href="#">UG Courses</a>
+                                <a class="block px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold" href="#">PG Courses</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <button class="hover:text-primary transition-colors flex items-center gap-1 group-hover:text-primary">
+                            Exams
+                            <span class="material-symbols-outlined text-sm transition-transform duration-300 group-hover:rotate-180">expand_more</span>
+                        </button>
+                        <div class="absolute top-full left-0 pt-4 hidden group-hover:block transition-all duration-300 min-w-[260px] z-50">
+                            <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800 py-2">
+                                <!-- Engineering -->
+                                <div class="relative group/sub">
+                                    <button class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item text-xs">
+                                        <span>Engineering (B.Tech / BE)</span>
+                                        <span class="material-symbols-outlined text-xs">chevron_right</span>
+                                    </button>
+                                    <div class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[200px]">
+                                        <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">JEE Main</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">JEE Advanced</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">BITSAT</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">VITEEE</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">SRMJEEE</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">COMEDK UGET</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">WBJEE</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">MHT CET</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">KCET</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Medical -->
+                                <div class="relative group/sub">
+                                    <button class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item text-xs">
+                                        <span>Medical (MBBS / BDS / AYUSH)</span>
+                                        <span class="material-symbols-outlined text-xs">chevron_right</span>
+                                    </button>
+                                    <div class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[150px]">
+                                        <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">NEET UG</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Management -->
+                                <div class="relative group/sub">
+                                    <button class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item text-xs">
+                                        <span>Management (BBA / MBA / PGDM)</span>
+                                        <span class="material-symbols-outlined text-xs">chevron_right</span>
+                                    </button>
+                                    <div class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[200px]">
+                                        <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">CAT</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">XAT</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">MAT</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">CMAT</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">NMAT</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">SNAP</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">IPMAT</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">NPAT</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Law -->
+                                <div class="relative group/sub">
+                                    <button class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item text-xs">
+                                        <span>Law (LLB / BA LLB)</span>
+                                        <span class="material-symbols-outlined text-xs">chevron_right</span>
+                                    </button>
+                                    <div class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[180px]">
+                                        <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">CLAT</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">AILET</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">LSAT India</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">SLAT</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">DU LLB Entrance</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Design / Fashion / Architecture -->
+                                <div class="relative group/sub">
+                                    <button class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item text-xs">
+                                        <span>Design / Fashion / Architecture</span>
+                                        <span class="material-symbols-outlined text-xs">chevron_right</span>
+                                    </button>
+                                    <div class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[220px]">
+                                        <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">NIFT Entrance Exam</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">NID DAT</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">UCEED</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">CEED</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">NATA</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">JEE Main Paper 2</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- General Undergraduate -->
+                                <div class="relative group/sub">
+                                    <button class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item text-xs">
+                                        <span>General UG (BA / BSc / BCom)</span>
+                                        <span class="material-symbols-outlined text-xs">chevron_right</span>
+                                    </button>
+                                    <div class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[200px]">
+                                        <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">CUET UG</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">IPU CET</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">NPAT</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">Christ University Entrance</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Computer Applications -->
+                                <div class="relative group/sub">
+                                    <button class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item text-xs">
+                                        <span>Computer Applications (BCA / MCA)</span>
+                                        <span class="material-symbols-outlined text-xs">chevron_right</span>
+                                    </button>
+                                    <div class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[200px]">
+                                        <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">NIMCET (MCA)</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">CUET</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">IPU CET</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">MAH MCA CET</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Science / Research -->
+                                <div class="relative group/sub">
+                                    <button class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item text-xs">
+                                        <span>Science / Research</span>
+                                        <span class="material-symbols-outlined text-xs">chevron_right</span>
+                                    </button>
+                                    <div class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[200px]">
+                                        <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">IISER Aptitude Test (IAT)</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">NEST</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Hotel Management -->
+                                <div class="relative group/sub">
+                                    <button class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item text-xs">
+                                        <span>Hotel Management</span>
+                                        <span class="material-symbols-outlined text-xs">chevron_right</span>
+                                    </button>
+                                    <div class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[150px]">
+                                        <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">NCHM JEE</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Defence -->
+                                <div class="relative group/sub">
+                                    <button class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item text-xs">
+                                        <span>Defence</span>
+                                        <span class="material-symbols-outlined text-xs">chevron_right</span>
+                                    </button>
+                                    <div class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[150px]">
+                                        <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">NDA Exam</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">CDS Exam</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Teaching / Education -->
+                                <div class="relative group/sub">
+                                    <button class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item text-xs">
+                                        <span>Teaching / Education</span>
+                                        <span class="material-symbols-outlined text-xs">chevron_right</span>
+                                    </button>
+                                    <div class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[220px]">
+                                        <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">CUET (for B.Ed)</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">DU B.Ed Entrance</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">IPU CET (B.Ed)</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">State B.Ed Entrance Exams</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <a class="hover:text-primary transition-colors flex items-center gap-1 group" href="#">
                         Careers
                         <span
@@ -144,7 +470,8 @@
                 <a class="text-lg hover:text-primary transition-colors flex justify-between items-center"
                     href="#">Careers <span class="material-symbols-outlined text-slate-400">chevron_right</span></a>
                 <a class="text-lg hover:text-primary transition-colors flex justify-between items-center"
-                    href="#reviews">Reviews <span class="material-symbols-outlined text-slate-400">chevron_right</span></a>
+                    href="#reviews">Reviews <span
+                        class="material-symbols-outlined text-slate-400">chevron_right</span></a>
                 <div class="pt-6 border-t border-slate-200 dark:border-slate-800">
                     <button
                         class="w-full px-5 py-4 text-white font-bold rounded-xl bg-secondary shadow-lg shadow-blue-500/20">
@@ -303,7 +630,7 @@
     <!-- College Listings -->
     <section class="bg-slate-50 dark:bg-slate-900/50 py-20 px-4">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white mb-10">Featured Colleges</h2>
+            <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white mb-10">Featured Universities</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- College Card -->
                 <div
@@ -323,7 +650,7 @@
                         <div class="flex justify-between items-start mb-4">
                             <div>
                                 <h3 class="text-xl font-bold text-slate-900 dark:text-white">Noida International
-                                  University</h3>
+                                    University</h3>
                                 <div class="flex items-center gap-1 text-slate-500 text-sm mt-1">
                                     <span class="material-symbols-outlined text-sm">location_on</span> Greater Noida,
                                     UP
@@ -437,6 +764,123 @@
             </div>
         </div>
     </section>
+    <!-- Featured Colleges -->
+    <section class="bg-white dark:bg-slate-900 py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white mb-10">Featured Colleges</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- College Card 1: GL Bajaj -->
+                <div class="bg-slate-50 dark:bg-slate-800/50 rounded-2xl shadow-sm overflow-hidden hover:shadow-2xl transition-all group border border-slate-100 dark:border-slate-800">
+                    <div class="relative h-56">
+                        <img alt="GL Bajaj Campus"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            src="https://images.shiksha.com/mediadata/images/1507374080php7Y15dy.jpeg" />
+                        <div class="absolute top-4 right-4 bg-white/90 dark:bg-slate-900/90 px-3 py-1.5 rounded-xl flex items-center gap-1 font-bold text-sm shadow-sm backdrop-blur-md">
+                            <span class="material-symbols-outlined text-yellow-500 text-base fill-current">star</span>
+                            4.4
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white">GL Bajaj Institute of Technology</h3>
+                                <div class="flex items-center gap-1 text-slate-500 text-sm mt-1">
+                                    <span class="material-symbols-outlined text-sm">location_on</span> Greater Noida, UP
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 mb-6 py-4 border-y border-slate-200/50 dark:border-slate-700/50">
+                            <div>
+                                <p class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Avg Fees</p>
+                                <p class="text-base font-bold text-slate-900 dark:text-white">₹ 1.25 L / Yr</p>
+                            </div>
+                            <div>
+                                <p class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Placements</p>
+                                <p class="text-base font-bold text-slate-900 dark:text-white">1200+ Offers</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <button class="flex-1 bg-primary text-white font-bold py-3 rounded-xl hover:shadow-lg hover:shadow-primary/20 transition-all hover:bg-orange-600">Apply Now</button>
+                            <button class="px-4 py-3 bg-white dark:bg-slate-700 text-slate-900 dark:text-white rounded-xl font-bold border border-slate-200 dark:border-slate-600">Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- College Card 2: GNIOT -->
+                <div class="bg-slate-50 dark:bg-slate-800/50 rounded-2xl shadow-sm overflow-hidden hover:shadow-2xl transition-all group border border-slate-100 dark:border-slate-800">
+                    <div class="relative h-56">
+                        <img alt="GNIOT Campus"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            src="https://admissionwala.in/storage/productimages/1499333475phpY9hQNo.jpeg" />
+                        <div class="absolute top-4 right-4 bg-white/90 dark:bg-slate-900/90 px-3 py-1.5 rounded-xl flex items-center gap-1 font-bold text-sm shadow-sm backdrop-blur-md">
+                            <span class="material-symbols-outlined text-yellow-500 text-base fill-current">star</span>
+                            4.0
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white">GNIOT Group of Institutions</h3>
+                                <div class="flex items-center gap-1 text-slate-500 text-sm mt-1">
+                                    <span class="material-symbols-outlined text-sm">location_on</span> Greater Noida, UP
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 mb-6 py-4 border-y border-slate-200/50 dark:border-slate-700/50">
+                            <div>
+                                <p class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Avg Fees</p>
+                                <p class="text-base font-bold text-slate-900 dark:text-white">₹ 1.30 L / Yr</p>
+                            </div>
+                            <div>
+                                <p class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Placement Rate</p>
+                                <p class="text-base font-bold text-slate-900 dark:text-white">95%</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <button class="flex-1 bg-primary text-white font-bold py-3 rounded-xl hover:shadow-lg hover:shadow-primary/20 transition-all hover:bg-orange-600">Apply Now</button>
+                            <button class="px-4 py-3 bg-white dark:bg-slate-700 text-slate-900 dark:text-white rounded-xl font-bold border border-slate-200 dark:border-slate-600">Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- College Card 3: Lloyd -->
+                <div class="bg-slate-50 dark:bg-slate-800/50 rounded-2xl shadow-sm overflow-hidden hover:shadow-2xl transition-all group border border-slate-100 dark:border-slate-800">
+                    <div class="relative h-56">
+                        <img alt="Lloyd Campus"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            src="https://image-static.collegedunia.com/public/college_data/images/appImage/1503382608cover.png" />
+                        <div class="absolute top-4 right-4 bg-white/90 dark:bg-slate-900/90 px-3 py-1.5 rounded-xl flex items-center gap-1 font-bold text-sm shadow-sm backdrop-blur-md">
+                            <span class="material-symbols-outlined text-yellow-500 text-base fill-current">star</span>
+                            4.1
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Lloyd Institute of Engineering</h3>
+                                <div class="flex items-center gap-1 text-slate-500 text-sm mt-1">
+                                    <span class="material-symbols-outlined text-sm">location_on</span> Greater Noida, UP
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 mb-6 py-4 border-y border-slate-200/50 dark:border-slate-700/50">
+                            <div>
+                                <p class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Avg Fees</p>
+                                <p class="text-base font-bold text-slate-900 dark:text-white">₹ 1.15 L / Yr</p>
+                            </div>
+                            <div>
+                                <p class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Placement Rate</p>
+                                <p class="text-base font-bold text-slate-900 dark:text-white">92%</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <button class="flex-1 bg-primary text-white font-bold py-3 rounded-xl hover:shadow-lg hover:shadow-primary/20 transition-all hover:bg-orange-600">Apply Now</button>
+                            <button class="px-4 py-3 bg-white dark:bg-slate-700 text-slate-900 dark:text-white rounded-xl font-bold border border-slate-200 dark:border-slate-600">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     <!-- Career Finder Tool -->
     <section class="max-w-7xl mx-auto px-4 py-24">
         <div class="bg-slate-900 rounded-[2.5rem] p-8 lg:p-16 relative overflow-hidden">
