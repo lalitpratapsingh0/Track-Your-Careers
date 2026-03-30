@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // --- Supabase Configuration ---
+    const SUPABASE_URL = 'https://njnaezgkdmzeoffxpijs.supabase.co';
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5qbmFlemdrZG16ZW9mZnhwaWpzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ4ODM5NzgsImV4cCI6MjA5MDQ1OTk3OH0.VGZc50ntkNGCYg0kVMRk3W1QYBwjFAiiTGxpl_dJxKg';
+    const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
     // --- Mobile Menu Logic ---
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const closeMenuBtn = document.getElementById('close-menu');
@@ -255,20 +260,55 @@ document.addEventListener('DOMContentLoaded', () => {
 
     closePopupBtn?.addEventListener('click', hidePopup);
 
-    popupForm?.addEventListener('submit', (e) => {
+    popupForm?.addEventListener('submit', async (e) => {
         e.preventDefault();
-        // Simulate submission
-        console.log('Popup Form Submitted');
+        
+        const name = document.getElementById('popup-name').value;
+        const email = document.getElementById('popup-email').value;
+        const phone = document.getElementById('popup-phone').value;
+        const city = document.getElementById('popup-city').value;
+        const state = document.getElementById('popup-state').value;
+        const submitBtn = popupForm.querySelector('button[type="submit"]');
 
-        popupForm.classList.add('hidden');
-        popupSuccess.classList.remove('hidden');
+        if (!name || !email || !phone || !city || !state) return;
 
-        // Close after 3 seconds on success, but DON'T restart the timer for this session
-        setTimeout(() => {
-            leadPopup.classList.add('opacity-0');
+        try {
+            // Show loading state
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Saving...';
+            }
+
+            const { data, error } = await _supabase
+                .from('leads')
+                .insert([
+                    { name, email, phone, city, state }
+                ]);
+
+            if (error) throw error;
+
+            console.log('Lead saved successfully:', data);
+
+            // Hide form and show success
+            popupForm.classList.add('hidden');
+            popupSuccess.classList.remove('hidden');
+
+            // Close popup after 3 seconds
             setTimeout(() => {
-                leadPopup.classList.add('hidden');
-            }, 300);
-        }, 3000);
+                leadPopup.classList.add('opacity-0');
+                setTimeout(() => {
+                    leadPopup.classList.add('hidden');
+                }, 300);
+            }, 3000);
+
+        } catch (err) {
+            console.error('Error saving lead:', err.message);
+            alert('Failed to save lead. Please try again.');
+            // Reset button
+            if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Get Career Roadmap';
+            }
+        }
     });
 });
