@@ -8,6 +8,7 @@
     <title>EduPath | Find Your Perfect College &amp; Career</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&amp;display=swap"
         rel="stylesheet" />
     <link
@@ -87,150 +88,233 @@
                 <div class="hidden xl:flex items-center gap-10 text-sm font-medium">
                     <!-- Colleges Multi-Level Dropdown -->
                     <div class="relative group/main">
-                        <button class="hover:text-primary transition-colors flex items-center gap-1 group-hover/main:text-primary py-4">
+                        <button
+                            class="hover:text-primary transition-colors flex items-center gap-1 group-hover/main:text-primary py-4">
                             Colleges
-                            <span class="material-symbols-outlined text-sm transition-transform duration-300 group-hover/main:rotate-180">expand_more</span>
+                            <span
+                                class="material-symbols-outlined text-sm transition-transform duration-300 group-hover/main:rotate-180">expand_more</span>
                         </button>
-                        <div class="absolute top-full left-0 pt-0 hidden group-hover/main:block transition-all duration-300 min-w-[200px] z-50">
-                            <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-visible border border-slate-200 dark:border-slate-800 mt-2">
+                        <div
+                            class="absolute top-full left-0 pt-0 hidden group-hover/main:block transition-all duration-300 min-w-[200px] z-50">
+                            <div
+                                class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-visible border border-slate-200 dark:border-slate-800 mt-2">
                                 <!-- Gurugram -->
                                 <div class="relative group/sub">
-                                    <button class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item">
+                                    <button
+                                        class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item">
                                         Gurugram <span class="material-symbols-outlined text-xs">chevron_right</span>
                                     </button>
-                                    <div class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[220px]">
-                                        <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
-                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">SAITM</a>
-                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">IILM</a>
-                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">SOIL</a>
-                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">BML Munjal University</a>
-                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">GD Goenka University</a>
-                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">K.R. Mangalam University</a>
+                                    <div
+                                        class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[220px]">
+                                        <div
+                                            class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">SAITM</a>
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">IILM</a>
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">SOIL</a>
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">BML Munjal University</a>
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">GD Goenka University</a>
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">K.R. Mangalam University</a>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Delhi -->
                                 <div class="relative group/sub">
-                                    <button class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item">
+                                    <button
+                                        class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item">
                                         Delhi <span class="material-symbols-outlined text-xs">chevron_right</span>
                                     </button>
-                                    <div class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[200px]">
-                                        <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
-                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">IMM</a>
-                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">DBS</a>
-                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">NDIM</a>
-                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">Asia Pacific</a>
-                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">FOSTIIMA</a>
+                                    <div
+                                        class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[200px]">
+                                        <div
+                                            class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">IMM</a>
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">DBS</a>
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">NDIM</a>
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">Asia Pacific</a>
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">FOSTIIMA</a>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Pune -->
                                 <div class="relative group/sub">
-                                    <button class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item">
+                                    <button
+                                        class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item">
                                         Pune <span class="material-symbols-outlined text-xs">chevron_right</span>
                                     </button>
-                                    <div class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[200px]">
-                                        <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
-                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">RIIM</a>
-                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">ISMS</a>
-                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">Lexicon</a>
-                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">PIBM</a>
-                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">ASM</a>
+                                    <div
+                                        class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[200px]">
+                                        <div
+                                            class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">RIIM</a>
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">ISMS</a>
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">Lexicon</a>
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">PIBM</a>
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">ASM</a>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Mumbai -->
                                 <div class="relative group/sub">
-                                    <button class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item">
+                                    <button
+                                        class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item">
                                         Mumbai <span class="material-symbols-outlined text-xs">chevron_right</span>
                                     </button>
-                                    <div class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[200px]">
-                                        <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
-                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">UBS</a>
-                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">ITM</a>
+                                    <div
+                                        class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[200px]">
+                                        <div
+                                            class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">UBS</a>
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">ITM</a>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Dehradun -->
                                 <div class="relative group/sub">
-                                    <button class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item">
+                                    <button
+                                        class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item">
                                         Dehradun <span class="material-symbols-outlined text-xs">chevron_right</span>
                                     </button>
-                                    <div class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[200px]">
-                                        <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
-                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">UPES</a>
-                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">Graphic Era</a>
-                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">Doon Business School</a>
-                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">Quantum University</a>
+                                    <div
+                                        class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[200px]">
+                                        <div
+                                            class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">UPES</a>
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">Graphic Era</a>
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">Doon Business School</a>
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">Quantum University</a>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Bangalore -->
                                 <div class="relative group/sub">
-                                    <button class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item">
+                                    <button
+                                        class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item">
                                         Bangalore <span class="material-symbols-outlined text-xs">chevron_right</span>
                                     </button>
-                                    <div class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[200px]">
-                                        <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
-                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">IIBS</a>
-                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">GIBS</a>
-                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">ISME</a>
-                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">ISBR</a>
-                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">IZee</a>
-                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">Alliance University</a>
+                                    <div
+                                        class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[200px]">
+                                        <div
+                                            class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">IIBS</a>
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">GIBS</a>
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">ISME</a>
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">ISBR</a>
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">IZee</a>
+                                            <a class="block px-5 py-2.5 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">Alliance University</a>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Greater Noida -->
                                 <div class="relative group/sub">
-                                    <button class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item">
-                                        Greater Noida <span class="material-symbols-outlined text-xs">chevron_right</span>
+                                    <button
+                                        class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item">
+                                        Greater Noida <span
+                                            class="material-symbols-outlined text-xs">chevron_right</span>
                                     </button>
-                                    <div class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[200px]">
-                                        <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">Lloyd</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">GNIOT</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">Mangalmay</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">GN Group</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">IIMT</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">Galgotias University</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">Bennett University</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">Sharda University</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">GBU (Gautam Buddha University)</a>
+                                    <div
+                                        class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[200px]">
+                                        <div
+                                            class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">Lloyd</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">GNIOT</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">Mangalmay</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">GN Group</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">IIMT</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">Galgotias University</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">Bennett University</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">Sharda University</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">GBU (Gautam Buddha University)</a>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Noida -->
                                 <div class="relative group/sub">
-                                    <button class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item">
+                                    <button
+                                        class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item">
                                         Noida <span class="material-symbols-outlined text-xs">chevron_right</span>
                                     </button>
-                                    <div class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[200px]">
-                                        <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">IMS</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">NIU (Noida International University)</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">IILM</a>
+                                    <div
+                                        class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[200px]">
+                                        <div
+                                            class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">IMS</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">NIU (Noida International University)</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">IILM</a>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Ghaziabad -->
                                 <div class="relative group/sub">
-                                    <button class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item">
+                                    <button
+                                        class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item">
                                         Ghaziabad <span class="material-symbols-outlined text-xs">chevron_right</span>
                                     </button>
-                                    <div class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[200px]">
-                                        <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">IMT</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">ABES</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">KIET</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">ITS</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">NIET</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">Accurate</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">KCC</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">HIMT</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">Dronacharya</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">RIG</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">IBMR</a>
+                                    <div
+                                        class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[200px]">
+                                        <div
+                                            class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">IMT</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">ABES</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">KIET</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">ITS</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">NIET</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">Accurate</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">KCC</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">HIMT</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">Dronacharya</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">RIG</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">IBMR</a>
                                         </div>
                                     </div>
                                 </div>
@@ -238,188 +322,277 @@
                         </div>
                     </div>
                     <div class="relative group">
-                        <button class="hover:text-primary transition-colors flex items-center gap-1 group-hover:text-primary">
+                        <button
+                            class="hover:text-primary transition-colors flex items-center gap-1 group-hover:text-primary">
                             Courses
-                            <span class="material-symbols-outlined text-sm transition-transform duration-300 group-hover:rotate-180">expand_more</span>
+                            <span
+                                class="material-symbols-outlined text-sm transition-transform duration-300 group-hover:rotate-180">expand_more</span>
                         </button>
-                        <div class="absolute top-full left-0 pt-4 hidden group-hover:block transition-all duration-300 min-w-[170px]">
-                            <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
-                                <a class="block px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold" href="#">UG Courses</a>
-                                <a class="block px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold" href="#">PG Courses</a>
+                        <div
+                            class="absolute top-full left-0 pt-4 hidden group-hover:block transition-all duration-300 min-w-[170px]">
+                            <div
+                                class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                                <a class="block px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold"
+                                    href="#">UG Courses</a>
+                                <a class="block px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold"
+                                    href="#">PG Courses</a>
                             </div>
                         </div>
                     </div>
                     <div class="relative group">
-                        <button class="hover:text-primary transition-colors flex items-center gap-1 group-hover:text-primary">
+                        <button
+                            class="hover:text-primary transition-colors flex items-center gap-1 group-hover:text-primary">
                             Exams
-                            <span class="material-symbols-outlined text-sm transition-transform duration-300 group-hover:rotate-180">expand_more</span>
+                            <span
+                                class="material-symbols-outlined text-sm transition-transform duration-300 group-hover:rotate-180">expand_more</span>
                         </button>
-                        <div class="absolute top-full left-0 pt-4 hidden group-hover:block transition-all duration-300 min-w-[260px] z-50">
-                            <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800 py-2">
+                        <div
+                            class="absolute top-full left-0 pt-4 hidden group-hover:block transition-all duration-300 min-w-[260px] z-50">
+                            <div
+                                class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800 py-2">
                                 <!-- Engineering -->
                                 <div class="relative group/sub">
-                                    <button class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item text-xs">
+                                    <button
+                                        class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item text-xs">
                                         <span>Engineering (B.Tech / BE)</span>
                                         <span class="material-symbols-outlined text-xs">chevron_right</span>
                                     </button>
-                                    <div class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[200px]">
-                                        <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">JEE Main</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">JEE Advanced</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">BITSAT</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">VITEEE</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">SRMJEEE</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">COMEDK UGET</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">WBJEE</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">MHT CET</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">KCET</a>
+                                    <div
+                                        class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[200px]">
+                                        <div
+                                            class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">JEE Main</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">JEE Advanced</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">BITSAT</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">VITEEE</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">SRMJEEE</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">COMEDK UGET</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">WBJEE</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">MHT CET</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">KCET</a>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Medical -->
                                 <div class="relative group/sub">
-                                    <button class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item text-xs">
+                                    <button
+                                        class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item text-xs">
                                         <span>Medical (MBBS / BDS / AYUSH)</span>
                                         <span class="material-symbols-outlined text-xs">chevron_right</span>
                                     </button>
-                                    <div class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[150px]">
-                                        <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">NEET UG</a>
+                                    <div
+                                        class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[150px]">
+                                        <div
+                                            class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">NEET UG</a>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Management -->
                                 <div class="relative group/sub">
-                                    <button class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item text-xs">
+                                    <button
+                                        class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item text-xs">
                                         <span>Management (BBA / MBA / PGDM)</span>
                                         <span class="material-symbols-outlined text-xs">chevron_right</span>
                                     </button>
-                                    <div class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[200px]">
-                                        <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">CAT</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">XAT</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">MAT</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">CMAT</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">NMAT</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">SNAP</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">IPMAT</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">NPAT</a>
+                                    <div
+                                        class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[200px]">
+                                        <div
+                                            class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">CAT</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">XAT</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">MAT</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">CMAT</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">NMAT</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">SNAP</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">IPMAT</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">NPAT</a>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Law -->
                                 <div class="relative group/sub">
-                                    <button class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item text-xs">
+                                    <button
+                                        class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item text-xs">
                                         <span>Law (LLB / BA LLB)</span>
                                         <span class="material-symbols-outlined text-xs">chevron_right</span>
                                     </button>
-                                    <div class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[180px]">
-                                        <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">CLAT</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">AILET</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">LSAT India</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">SLAT</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">DU LLB Entrance</a>
+                                    <div
+                                        class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[180px]">
+                                        <div
+                                            class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">CLAT</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">AILET</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">LSAT India</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">SLAT</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">DU LLB Entrance</a>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Design / Fashion / Architecture -->
                                 <div class="relative group/sub">
-                                    <button class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item text-xs">
+                                    <button
+                                        class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item text-xs">
                                         <span>Design / Fashion / Architecture</span>
                                         <span class="material-symbols-outlined text-xs">chevron_right</span>
                                     </button>
-                                    <div class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[220px]">
-                                        <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">NIFT Entrance Exam</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">NID DAT</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">UCEED</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">CEED</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">NATA</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">JEE Main Paper 2</a>
+                                    <div
+                                        class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[220px]">
+                                        <div
+                                            class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">NIFT Entrance Exam</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">NID DAT</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">UCEED</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">CEED</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">NATA</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">JEE Main Paper 2</a>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- General Undergraduate -->
                                 <div class="relative group/sub">
-                                    <button class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item text-xs">
+                                    <button
+                                        class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item text-xs">
                                         <span>General UG (BA / BSc / BCom)</span>
                                         <span class="material-symbols-outlined text-xs">chevron_right</span>
                                     </button>
-                                    <div class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[200px]">
-                                        <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">CUET UG</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">IPU CET</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">NPAT</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">Christ University Entrance</a>
+                                    <div
+                                        class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[200px]">
+                                        <div
+                                            class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">CUET UG</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">IPU CET</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">NPAT</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">Christ University Entrance</a>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Computer Applications -->
                                 <div class="relative group/sub">
-                                    <button class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item text-xs">
+                                    <button
+                                        class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item text-xs">
                                         <span>Computer Applications (BCA / MCA)</span>
                                         <span class="material-symbols-outlined text-xs">chevron_right</span>
                                     </button>
-                                    <div class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[200px]">
-                                        <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">NIMCET (MCA)</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">CUET</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">IPU CET</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">MAH MCA CET</a>
+                                    <div
+                                        class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[200px]">
+                                        <div
+                                            class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">NIMCET (MCA)</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">CUET</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">IPU CET</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">MAH MCA CET</a>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Science / Research -->
                                 <div class="relative group/sub">
-                                    <button class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item text-xs">
+                                    <button
+                                        class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item text-xs">
                                         <span>Science / Research</span>
                                         <span class="material-symbols-outlined text-xs">chevron_right</span>
                                     </button>
-                                    <div class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[200px]">
-                                        <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">IISER Aptitude Test (IAT)</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">NEST</a>
+                                    <div
+                                        class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[200px]">
+                                        <div
+                                            class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">IISER Aptitude Test (IAT)</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">NEST</a>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Hotel Management -->
                                 <div class="relative group/sub">
-                                    <button class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item text-xs">
+                                    <button
+                                        class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item text-xs">
                                         <span>Hotel Management</span>
                                         <span class="material-symbols-outlined text-xs">chevron_right</span>
                                     </button>
-                                    <div class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[150px]">
-                                        <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">NCHM JEE</a>
+                                    <div
+                                        class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[150px]">
+                                        <div
+                                            class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">NCHM JEE</a>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Defence -->
                                 <div class="relative group/sub">
-                                    <button class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item text-xs">
+                                    <button
+                                        class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item text-xs">
                                         <span>Defence</span>
                                         <span class="material-symbols-outlined text-xs">chevron_right</span>
                                     </button>
-                                    <div class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[150px]">
-                                        <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">NDA Exam</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">CDS Exam</a>
+                                    <div
+                                        class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[150px]">
+                                        <div
+                                            class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">NDA Exam</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">CDS Exam</a>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Teaching / Education -->
                                 <div class="relative group/sub">
-                                    <button class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item text-xs">
+                                    <button
+                                        class="w-full text-left px-5 py-3 hover:bg-primary hover:text-white transition-colors text-sm font-semibold flex justify-between items-center group/item text-xs">
                                         <span>Teaching / Education</span>
                                         <span class="material-symbols-outlined text-xs">chevron_right</span>
                                     </button>
-                                    <div class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[220px]">
-                                        <div class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">CUET (for B.Ed)</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">DU B.Ed Entrance</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">IPU CET (B.Ed)</a>
-                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium" href="#">State B.Ed Entrance Exams</a>
+                                    <div
+                                        class="absolute top-0 left-full pl-2 hidden group-hover/sub:block min-w-[220px]">
+                                        <div
+                                            class="glass-card bg-white/95 dark:bg-slate-900/95 rounded-lg shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">CUET (for B.Ed)</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">DU B.Ed Entrance</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">IPU CET (B.Ed)</a>
+                                            <a class="block px-5 py-2 hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                                                href="#">State B.Ed Entrance Exams</a>
                                         </div>
                                     </div>
                                 </div>
@@ -770,12 +943,14 @@
             <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white mb-10">Featured Colleges</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- College Card 1: GL Bajaj -->
-                <div class="bg-slate-50 dark:bg-slate-800/50 rounded-2xl shadow-sm overflow-hidden hover:shadow-2xl transition-all group border border-slate-100 dark:border-slate-800">
+                <div
+                    class="bg-slate-50 dark:bg-slate-800/50 rounded-2xl shadow-sm overflow-hidden hover:shadow-2xl transition-all group border border-slate-100 dark:border-slate-800">
                     <div class="relative h-56">
                         <img alt="GL Bajaj Campus"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                             src="https://images.shiksha.com/mediadata/images/1507374080php7Y15dy.jpeg" />
-                        <div class="absolute top-4 right-4 bg-white/90 dark:bg-slate-900/90 px-3 py-1.5 rounded-xl flex items-center gap-1 font-bold text-sm shadow-sm backdrop-blur-md">
+                        <div
+                            class="absolute top-4 right-4 bg-white/90 dark:bg-slate-900/90 px-3 py-1.5 rounded-xl flex items-center gap-1 font-bold text-sm shadow-sm backdrop-blur-md">
                             <span class="material-symbols-outlined text-yellow-500 text-base fill-current">star</span>
                             4.4
                         </div>
@@ -783,13 +958,15 @@
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-4">
                             <div>
-                                <h3 class="text-xl font-bold text-slate-900 dark:text-white">GL Bajaj Institute of Technology</h3>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white">GL Bajaj Institute of
+                                    Technology</h3>
                                 <div class="flex items-center gap-1 text-slate-500 text-sm mt-1">
                                     <span class="material-symbols-outlined text-sm">location_on</span> Greater Noida, UP
                                 </div>
                             </div>
                         </div>
-                        <div class="grid grid-cols-2 gap-4 mb-6 py-4 border-y border-slate-200/50 dark:border-slate-700/50">
+                        <div
+                            class="grid grid-cols-2 gap-4 mb-6 py-4 border-y border-slate-200/50 dark:border-slate-700/50">
                             <div>
                                 <p class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Avg Fees</p>
                                 <p class="text-base font-bold text-slate-900 dark:text-white">₹ 1.25 L / Yr</p>
@@ -800,19 +977,24 @@
                             </div>
                         </div>
                         <div class="flex gap-3">
-                            <button class="flex-1 bg-primary text-white font-bold py-3 rounded-xl hover:shadow-lg hover:shadow-primary/20 transition-all hover:bg-orange-600">Apply Now</button>
-                            <button class="px-4 py-3 bg-white dark:bg-slate-700 text-slate-900 dark:text-white rounded-xl font-bold border border-slate-200 dark:border-slate-600">Details</button>
+                            <button
+                                class="flex-1 bg-primary text-white font-bold py-3 rounded-xl hover:shadow-lg hover:shadow-primary/20 transition-all hover:bg-orange-600">Apply
+                                Now</button>
+                            <button
+                                class="px-4 py-3 bg-white dark:bg-slate-700 text-slate-900 dark:text-white rounded-xl font-bold border border-slate-200 dark:border-slate-600">Details</button>
                         </div>
                     </div>
                 </div>
 
                 <!-- College Card 2: GNIOT -->
-                <div class="bg-slate-50 dark:bg-slate-800/50 rounded-2xl shadow-sm overflow-hidden hover:shadow-2xl transition-all group border border-slate-100 dark:border-slate-800">
+                <div
+                    class="bg-slate-50 dark:bg-slate-800/50 rounded-2xl shadow-sm overflow-hidden hover:shadow-2xl transition-all group border border-slate-100 dark:border-slate-800">
                     <div class="relative h-56">
                         <img alt="GNIOT Campus"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                             src="https://admissionwala.in/storage/productimages/1499333475phpY9hQNo.jpeg" />
-                        <div class="absolute top-4 right-4 bg-white/90 dark:bg-slate-900/90 px-3 py-1.5 rounded-xl flex items-center gap-1 font-bold text-sm shadow-sm backdrop-blur-md">
+                        <div
+                            class="absolute top-4 right-4 bg-white/90 dark:bg-slate-900/90 px-3 py-1.5 rounded-xl flex items-center gap-1 font-bold text-sm shadow-sm backdrop-blur-md">
                             <span class="material-symbols-outlined text-yellow-500 text-base fill-current">star</span>
                             4.0
                         </div>
@@ -820,36 +1002,44 @@
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-4">
                             <div>
-                                <h3 class="text-xl font-bold text-slate-900 dark:text-white">GNIOT Group of Institutions</h3>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white">GNIOT Group of Institutions
+                                </h3>
                                 <div class="flex items-center gap-1 text-slate-500 text-sm mt-1">
                                     <span class="material-symbols-outlined text-sm">location_on</span> Greater Noida, UP
                                 </div>
                             </div>
                         </div>
-                        <div class="grid grid-cols-2 gap-4 mb-6 py-4 border-y border-slate-200/50 dark:border-slate-700/50">
+                        <div
+                            class="grid grid-cols-2 gap-4 mb-6 py-4 border-y border-slate-200/50 dark:border-slate-700/50">
                             <div>
                                 <p class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Avg Fees</p>
                                 <p class="text-base font-bold text-slate-900 dark:text-white">₹ 1.30 L / Yr</p>
                             </div>
                             <div>
-                                <p class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Placement Rate</p>
+                                <p class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Placement Rate
+                                </p>
                                 <p class="text-base font-bold text-slate-900 dark:text-white">95%</p>
                             </div>
                         </div>
                         <div class="flex gap-3">
-                            <button class="flex-1 bg-primary text-white font-bold py-3 rounded-xl hover:shadow-lg hover:shadow-primary/20 transition-all hover:bg-orange-600">Apply Now</button>
-                            <button class="px-4 py-3 bg-white dark:bg-slate-700 text-slate-900 dark:text-white rounded-xl font-bold border border-slate-200 dark:border-slate-600">Details</button>
+                            <button
+                                class="flex-1 bg-primary text-white font-bold py-3 rounded-xl hover:shadow-lg hover:shadow-primary/20 transition-all hover:bg-orange-600">Apply
+                                Now</button>
+                            <button
+                                class="px-4 py-3 bg-white dark:bg-slate-700 text-slate-900 dark:text-white rounded-xl font-bold border border-slate-200 dark:border-slate-600">Details</button>
                         </div>
                     </div>
                 </div>
 
                 <!-- College Card 3: Lloyd -->
-                <div class="bg-slate-50 dark:bg-slate-800/50 rounded-2xl shadow-sm overflow-hidden hover:shadow-2xl transition-all group border border-slate-100 dark:border-slate-800">
+                <div
+                    class="bg-slate-50 dark:bg-slate-800/50 rounded-2xl shadow-sm overflow-hidden hover:shadow-2xl transition-all group border border-slate-100 dark:border-slate-800">
                     <div class="relative h-56">
                         <img alt="Lloyd Campus"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                             src="https://image-static.collegedunia.com/public/college_data/images/appImage/1503382608cover.png" />
-                        <div class="absolute top-4 right-4 bg-white/90 dark:bg-slate-900/90 px-3 py-1.5 rounded-xl flex items-center gap-1 font-bold text-sm shadow-sm backdrop-blur-md">
+                        <div
+                            class="absolute top-4 right-4 bg-white/90 dark:bg-slate-900/90 px-3 py-1.5 rounded-xl flex items-center gap-1 font-bold text-sm shadow-sm backdrop-blur-md">
                             <span class="material-symbols-outlined text-yellow-500 text-base fill-current">star</span>
                             4.1
                         </div>
@@ -857,516 +1047,538 @@
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-4">
                             <div>
-                                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Lloyd Institute of Engineering</h3>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Lloyd Institute of
+                                    Engineering</h3>
                                 <div class="flex items-center gap-1 text-slate-500 text-sm mt-1">
                                     <span class="material-symbols-outlined text-sm">location_on</span> Greater Noida, UP
                                 </div>
                             </div>
                         </div>
-                        <div class="grid grid-cols-2 gap-4 mb-6 py-4 border-y border-slate-200/50 dark:border-slate-700/50">
+                        <div
+                            class="grid grid-cols-2 gap-4 mb-6 py-4 border-y border-slate-200/50 dark:border-slate-700/50">
                             <div>
                                 <p class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Avg Fees</p>
                                 <p class="text-base font-bold text-slate-900 dark:text-white">₹ 1.15 L / Yr</p>
                             </div>
                             <div>
-                                <p class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Placement Rate</p>
+                                <p class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Placement Rate
+                                </p>
                                 <p class="text-base font-bold text-slate-900 dark:text-white">92%</p>
                             </div>
                         </div>
                         <div class="flex gap-3">
-                            <button class="flex-1 bg-primary text-white font-bold py-3 rounded-xl hover:shadow-lg hover:shadow-primary/20 transition-all hover:bg-orange-600">Apply Now</button>
-                            <button class="px-4 py-3 bg-white dark:bg-slate-700 text-slate-900 dark:text-white rounded-xl font-bold border border-slate-200 dark:border-slate-600">Details</button>
+                            <button
+                                class="flex-1 bg-primary text-white font-bold py-3 rounded-xl hover:shadow-lg hover:shadow-primary/20 transition-all hover:bg-orange-600">Apply
+                                Now</button>
+                            <button
+                                class="px-4 py-3 bg-white dark:bg-slate-700 text-slate-900 dark:text-white rounded-xl font-bold border border-slate-200 dark:border-slate-600">Details</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    <!-- Career Finder Tool -->
-    <section class="max-w-7xl mx-auto px-4 py-24">
-        <div class="bg-slate-900 rounded-[2.5rem] p-8 lg:p-16 relative overflow-hidden">
-            <!-- Decorative circle -->
-            <div class="absolute -top-24 -right-24 size-64 bg-orange-500/20 rounded-full blur-3xl"></div>
-            <div class="relative z-10 grid lg:grid-cols-2 gap-16 items-center">
+        <!-- Career Finder Tool -->
+        <section class="max-w-7xl mx-auto px-4 py-24">
+            <div class="bg-slate-900 rounded-[2.5rem] p-8 lg:p-16 relative overflow-hidden">
+                <!-- Decorative circle -->
+                <div class="absolute -top-24 -right-24 size-64 bg-orange-500/20 rounded-full blur-3xl"></div>
+                <div class="relative z-10 grid lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 class="text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-6">Confused about
+                            your
+                            <span class="text-primary italic">future?</span>
+                        </h2>
+                        <p class="text-slate-400 text-lg mb-10 max-w-md">Our AI-driven Career Finder helps you map your
+                            interests to the most promising career paths in the next decade.</p>
+                        <div class="space-y-6">
+                            <div class="flex gap-4">
+                                <div class="absolute -top-24 -right-24 size-64 bg-orange-500/20 rounded-full blur-3xl">
+                                    <span class="material-symbols-outlined">analytics</span>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-bold">Skill Assessment</h4>
+                                    <p class="text-slate-400 text-sm">Analyze your aptitude and technical skills</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="absolute -top-24 -right-24 size-64 bg-orange-500/20 rounded-full blur-3xl">
+                                    <span class="material-symbols-outlined">trending_up</span>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-bold">Market Demand</h4>
+                                    <p class="text-slate-400 text-sm">Find roles with high growth potential by 2030</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-3xl p-8 shadow-2xl">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-8">Career Finder Wizard</h3>
+                        <div id="wizard-container" class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-bold text-slate-700 mb-2">What interests you
+                                    most?</label>
+                                <select id="wizard-interest"
+                                    class="w-full bg-slate-100 border-none rounded-xl py-3.5 focus:ring-2 focus:ring-primary/20 text-slate-700 font-medium">
+                                    <option>Problem Solving &amp; Logic</option>
+                                    <option>Creative Arts &amp; Design</option>
+                                    <option>Human Behavior &amp; Health</option>
+                                    <option>Business &amp; Strategy</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-slate-700 mb-2">Current Education
+                                    Stream</label>
+                                <div id="education-options" class="grid grid-cols-2 gap-3">
+                                    <button type="button"
+                                        class="edu-opt px-4 py-3 bg-primary text-white rounded-xl font-bold text-sm shadow-orange-500/20 hover:bg-orange-600"
+                                        data-val="Science">Science</button>
+                                    <button type="button"
+                                        class="edu-opt px-4 py-3 bg-slate-100 text-slate-600 rounded-xl font-bold text-sm"
+                                        data-val="Commerce">Commerce</button>
+                                    <button type="button"
+                                        class="edu-opt px-4 py-3 bg-slate-100 text-slate-600 rounded-xl font-bold text-sm"
+                                        data-val="Arts">Arts</button>
+                                    <button type="button"
+                                        class="edu-opt px-4 py-3 bg-slate-100 text-slate-600 rounded-xl font-bold text-sm"
+                                        data-val="Others">Others</button>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-slate-700 mb-2">Ultimate Career Goal</label>
+                                <select id="wizard-goal"
+                                    class="w-full bg-slate-100 border-none rounded-xl py-3.5 focus:ring-2 focus:ring-primary/20 text-slate-700 font-medium">
+                                    <option>High Salary Package</option>
+                                    <option>Research &amp; Innovation</option>
+                                    <option>Government / UPSC</option>
+                                    <option>Entrepreneurship</option>
+                                </select>
+                            </div>
+                            <button id="find-career-btn"
+                                class="w-full bg-primary text-white font-extrabold py-4 rounded-xl shadow-xl hover:shadow-primary/30 transition-all flex items-center justify-center gap-2 shadow-orange-500/20 hover:bg-orange-600">
+                                Find My Career <span class="material-symbols-outlined">arrow_forward</span>
+                            </button>
+                        </div>
+                        <div id="wizard-results"
+                            class="hidden space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
+                            <div class="p-6 bg-slate-50 rounded-2xl border-2 border-primary/20">
+                                <p class="text-sm font-bold text-primary uppercase tracking-wider mb-2">Top
+                                    Recommendation
+                                </p>
+                                <h4 id="result-title" class="text-2xl font-bold text-slate-900">Full Stack AI Developer
+                                </h4>
+                                <p id="result-desc" class="text-slate-600 mt-2">Based on your love for logic and science
+                                    background, this role offers high growth and salary.</p>
+                            </div>
+                            <button id="reset-wizard"
+                                class="w-full py-3 text-slate-500 font-bold hover:text-primary transition-colors">Start
+                                Over</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Top Exams -->
+        <section class="max-w-7xl mx-auto px-4 py-20">
+            <div class="flex justify-between items-center mb-10">
+                <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white">Upcoming Entrance Exams</h2>
+                <button class="text-primary font-bold">View Calendar</button>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Exam Card -->
+                <div
+                    class="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-lg transition-all">
+                    <div class="flex items-start justify-between mb-6">
+                        <div
+                            class="size-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary font-black bg-secondary/10 text-secondary">
+                            JEE</div>
+                        <span
+                            class="px-3 py-1 bg-green-100 text-green-600 text-[10px] font-bold rounded-full">Open</span>
+                    </div>
+                    <h4 class="font-bold text-slate-900 dark:text-white mb-2">JEE Main 2025</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-2 text-xs text-slate-500">
+                            <span class="material-symbols-outlined text-sm">calendar_today</span> Jan 24 - Feb 01
+                        </div>
+                        <div class="flex items-center gap-2 text-xs text-slate-500">
+                            <span class="material-symbols-outlined text-sm">person</span> Class 12th (PCM)
+                        </div>
+                    </div>
+                    <button
+                        class="w-full mt-6 py-2.5 bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-white font-bold rounded-xl text-sm hover:bg-primary hover:text-white transition-all">Details</button>
+                </div>
+                <!-- Exam 2 -->
+                <div
+                    class="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-lg transition-all">
+                    <div class="flex items-start justify-between mb-6">
+                        <div
+                            class="size-12 bg-red-100 rounded-xl flex items-center justify-center text-red-600 font-black">
+                            NEET</div>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-500 text-[10px] font-bold rounded-full">Closing
+                            Soon</span>
+                    </div>
+                    <h4 class="font-bold text-slate-900 dark:text-white mb-2">NEET UG 2025</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-2 text-xs text-slate-500">
+                            <span class="material-symbols-outlined text-sm">calendar_today</span> May 05, 2025
+                        </div>
+                        <div class="flex items-center gap-2 text-xs text-slate-500">
+                            <span class="material-symbols-outlined text-sm">person</span> Class 12th (PCB)
+                        </div>
+                    </div>
+                    <button
+                        class="w-full mt-6 py-2.5 bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-white font-bold rounded-xl text-sm hover:bg-primary hover:text-white transition-all">Details</button>
+                </div>
+                <!-- Exam 3 -->
+                <div
+                    class="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-lg transition-all">
+                    <div class="flex items-start justify-between mb-6">
+                        <div
+                            class="size-12 bg-purple-100 rounded-xl flex items-center justify-center text-purple-600 font-black">
+                            CAT</div>
+                        <span
+                            class="px-3 py-1 bg-green-100 text-green-600 text-[10px] font-bold rounded-full">Open</span>
+                    </div>
+                    <h4 class="font-bold text-slate-900 dark:text-white mb-2">CAT MBA 2024</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-2 text-xs text-slate-500">
+                            <span class="material-symbols-outlined text-sm">calendar_today</span> Nov 24, 2024
+                        </div>
+                        <div class="flex items-center gap-2 text-xs text-slate-500">
+                            <span class="material-symbols-outlined text-sm">person</span> Graduation Degree
+                        </div>
+                    </div>
+                    <button
+                        class="w-full mt-6 py-2.5 bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-white font-bold rounded-xl text-sm hover:bg-primary hover:text-white transition-all">Details</button>
+                </div>
+                <!-- Exam 4 -->
+                <div
+                    class="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-lg transition-all">
+                    <div class="flex items-start justify-between mb-6">
+                        <div
+                            class="size-12 bg-amber-100 rounded-xl flex items-center justify-center text-amber-600 font-black">
+                            CUET</div>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-500 text-[10px] font-bold rounded-full">Coming
+                            Soon</span>
+                    </div>
+                    <h4 class="font-bold text-slate-900 dark:text-white mb-2">CUET UG 2025</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-2 text-xs text-slate-500">
+                            <span class="material-symbols-outlined text-sm">calendar_today</span> May 15 - May 31
+                        </div>
+                        <div class="flex items-center gap-2 text-xs text-slate-500">
+                            <span class="material-symbols-outlined text-sm">person</span> Class 12th Pass
+                        </div>
+                    </div>
+                    <button
+                        class="w-full mt-6 py-2.5 bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-white font-bold rounded-xl text-sm hover:bg-primary hover:text-white transition-all">Details</button>
+                </div>
+            </div>
+        </section>
+        <!-- Student Reviews -->
+        <section id="reviews" class="bg-slate-50 dark:bg-slate-900 py-20 px-4 overflow-hidden">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white text-center mb-16 italic">"A community
+                    of
+                    learners, for learners"</h2>
+                <div class="flex gap-8 overflow-x-auto pb-8 snap-x no-scrollbar">
+                    <!-- Testimonial 1 -->
+                    <div class="snap-center shrink-0 w-[400px] glass-card p-8 rounded-3xl">
+                        <div class="flex gap-1 text-yellow-500 mb-6">
+                            <span class="material-symbols-outlined fill-current">star</span>
+                            <span class="material-symbols-outlined fill-current">star</span>
+                            <span class="material-symbols-outlined fill-current">star</span>
+                            <span class="material-symbols-outlined fill-current">star</span>
+                            <span class="material-symbols-outlined fill-current">star</span>
+                        </div>
+                        <p class="text-slate-700 dark:text-slate-300 mb-8 italic">"The career finder tool actually
+                            suggested
+                            paths I hadn't even considered. I'm now studying AI at IIT Madras and it's perfect."</p>
+                        <div class="flex items-center gap-4">
+                            <img alt="Avatar" class="size-12 rounded-full" data-alt="Satisfied student portrait"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg48YSHZyvZWFYEVFr0QmpN2FNcQtKymXiIU5dKEcfajoc9eAMGVOqb92o7JHFMMBm-VeFh8ISGD3ETV9acZxWYzi8g3B5cVPQOSrEh_tAk6KEWocc9b3ZJonkBZmqZiolnFOteYdHClz711qhzDtlQ_YiqIzQtniFq3kX022b3xX0q3rRgTxpctre7yYGzviMwFJfd0A7rmP9DVth1AaJjOIPgqbfm05alb23Wnow3jeAqIenoJFlxpryP8rstgIfOewII0GZl5fD" />
+                            <div>
+                                <h5 class="font-bold text-slate-900 dark:text-white">Arjun Sharma</h5>
+                                <p class="text-xs text-slate-500">B.Tech Student, IIT Madras</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="snap-center shrink-0 w-[400px] glass-card p-8 rounded-3xl">
+                        <div class="flex gap-1 text-yellow-500 mb-6">
+                            <span class="material-symbols-outlined fill-current">star</span>
+                            <span class="material-symbols-outlined fill-current">star</span>
+                            <span class="material-symbols-outlined fill-current">star</span>
+                            <span class="material-symbols-outlined fill-current">star</span>
+                            <span class="material-symbols-outlined fill-current">star</span>
+                        </div>
+                        <p class="text-slate-700 dark:text-slate-300 mb-8 italic">"EduPath made the application process
+                            for
+                            multiple colleges so seamless. Saved me weeks of paperwork and stress."</p>
+                        <div class="flex items-center gap-4">
+                            <img alt="Avatar" class="size-12 rounded-full" data-alt="Student smiling for testimonial"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB765dDoojYytdstCMH-KjhIykOKQQMGyVEJY9JLhqdWybteqfMlnfgDQ77wS3P3QACP_Nh6afwoIofJIPLD0xEEFpNszio5LOzc1iEA9n5Gw0WzGHIzrj8kWjxk6paTVtGFC0eCasze7Sz0OeiWSXi348Ir3PxTX8tO4ZeIlV3tP_HQ0D3twsdu6Z-OvaPfBrFEVFck4q2B35Z0Nky7RRkcrkLEQfQByyi5RZ5ydCcd7OwfPcq7vWF2velBfnhQSClHucLujrvXPJV" />
+                            <div>
+                                <h5 class="font-bold text-slate-900 dark:text-white">Priya Patel</h5>
+                                <p class="text-xs text-slate-500">MBA aspirant, IIM A</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div class="snap-center shrink-0 w-[400px] glass-card p-8 rounded-3xl">
+                        <div class="flex gap-1 text-yellow-500 mb-6">
+                            <span class="material-symbols-outlined fill-current">star</span>
+                            <span class="material-symbols-outlined fill-current">star</span>
+                            <span class="material-symbols-outlined fill-current">star</span>
+                            <span class="material-symbols-outlined fill-current">star</span>
+                            <span class="material-symbols-outlined fill-current">star</span>
+                        </div>
+                        <p class="text-slate-700 dark:text-slate-300 mb-8 italic">"The college reviews from actual
+                            seniors
+                            helped me understand the ground reality before I took admission."</p>
+                        <div class="flex items-center gap-4">
+                            <img alt="Avatar" class="size-12 rounded-full" data-alt="Student profile photo"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKvMvIm0wZy0QSNPn2YCpVWb5taQDJoMAfb9vmKxh_ELEXuzakD4gVYaqq3JqWQIAgW8awpqUuewSXU08fIweN_4WyGgK9ol8WN4jgm9pBGmxsreneenS1Ph4hwRp-VwfBD-WKgyDAKj4PmgLsBahsN_PBgyz7viXpHQpVOVKnEI1mnBPtya4if83caIVSueK25sUWjCIop-hIqCIh0EFNAmYCmS78WGdv0B6vcBzvXXaPJOuwH3Zm6kGZVo1BUHgM_HYRZu9bIoBQ" />
+                            <div>
+                                <h5 class="font-bold text-slate-900 dark:text-white">Rahul Verma</h5>
+                                <p class="text-xs text-slate-500">Design Student, NID</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Lead Generation / Contact -->
+        <section id="contact-section" class="max-w-7xl mx-auto px-4 py-24">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div>
-                    <h2 class="text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-6">Confused about your
-                        <span class="text-primary italic">future?</span>
+                    <h2 class="text-4xl font-extrabold text-slate-900 dark:text-white mb-6">Speak with an Expert
+                        Counselor
                     </h2>
-                    <p class="text-slate-400 text-lg mb-10 max-w-md">Our AI-driven Career Finder helps you map your
-                        interests to the most promising career paths in the next decade.</p>
-                    <div class="space-y-6">
-                        <div class="flex gap-4">
-                            <div class="absolute -top-24 -right-24 size-64 bg-orange-500/20 rounded-full blur-3xl">
-                                <span class="material-symbols-outlined">analytics</span>
-                            </div>
-                            <div>
-                                <h4 class="text-white font-bold">Skill Assessment</h4>
-                                <p class="text-slate-400 text-sm">Analyze your aptitude and technical skills</p>
-                            </div>
+                    <p class="text-slate-600 dark:text-slate-400 text-lg mb-8">Get personalized guidance on college
+                        selection, scholarship eligibility, and career planning. It's 100% free.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            <span class="font-medium text-slate-700 dark:text-slate-300">One-on-one video
+                                consultation</span>
                         </div>
-                        <div class="flex gap-4">
-                            <div class="absolute -top-24 -right-24 size-64 bg-orange-500/20 rounded-full blur-3xl">
-                                <span class="material-symbols-outlined">trending_up</span>
-                            </div>
-                            <div>
-                                <h4 class="text-white font-bold">Market Demand</h4>
-                                <p class="text-slate-400 text-sm">Find roles with high growth potential by 2030</p>
-                            </div>
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            <span class="font-medium text-slate-700 dark:text-slate-300">Scholarship assistance up to ₹1
+                                Lakh</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            <span class="font-medium text-slate-700 dark:text-slate-300">Direct interaction with college
+                                alumni</span>
                         </div>
                     </div>
                 </div>
-                <div class="bg-white rounded-3xl p-8 shadow-2xl">
-                    <h3 class="text-2xl font-bold text-slate-900 mb-8">Career Finder Wizard</h3>
-                    <div id="wizard-container" class="space-y-6">
-                        <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-2">What interests you most?</label>
-                            <select id="wizard-interest"
-                                class="w-full bg-slate-100 border-none rounded-xl py-3.5 focus:ring-2 focus:ring-primary/20 text-slate-700 font-medium">
-                                <option>Problem Solving &amp; Logic</option>
-                                <option>Creative Arts &amp; Design</option>
-                                <option>Human Behavior &amp; Health</option>
-                                <option>Business &amp; Strategy</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-2">Current Education Stream</label>
-                            <div id="education-options" class="grid grid-cols-2 gap-3">
-                                <button type="button"
-                                    class="edu-opt px-4 py-3 bg-primary text-white rounded-xl font-bold text-sm shadow-orange-500/20 hover:bg-orange-600"
-                                    data-val="Science">Science</button>
-                                <button type="button"
-                                    class="edu-opt px-4 py-3 bg-slate-100 text-slate-600 rounded-xl font-bold text-sm"
-                                    data-val="Commerce">Commerce</button>
-                                <button type="button"
-                                    class="edu-opt px-4 py-3 bg-slate-100 text-slate-600 rounded-xl font-bold text-sm"
-                                    data-val="Arts">Arts</button>
-                                <button type="button"
-                                    class="edu-opt px-4 py-3 bg-slate-100 text-slate-600 rounded-xl font-bold text-sm"
-                                    data-val="Others">Others</button>
+                <div
+                    class="bg-white dark:bg-slate-800 rounded-[2rem] p-8 md:p-12 shadow-2xl border border-slate-100 dark:border-slate-700">
+                    <form id="contact-form" class="space-y-5">
+                        <div class="grid md:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Full
+                                    Name</label>
+                                <input id="contact-name"
+                                    class="w-full bg-slate-50 dark:bg-slate-900 border-none rounded-xl py-3.5 focus:ring-2 focus:ring-primary/20 text-slate-700 dark:text-slate-200"
+                                    placeholder="John Doe" type="text" required />
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Phone
+                                    Number</label>
+                                <input id="contact-phone"
+                                    class="w-full bg-slate-50 dark:bg-slate-900 border-none rounded-xl py-3.5 focus:ring-2 focus:ring-primary/20 text-slate-700 dark:text-slate-200"
+                                    placeholder="+91 98765 43210" type="tel" required />
                             </div>
                         </div>
                         <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-2">Ultimate Career Goal</label>
-                            <select id="wizard-goal"
-                                class="w-full bg-slate-100 border-none rounded-xl py-3.5 focus:ring-2 focus:ring-primary/20 text-slate-700 font-medium">
-                                <option>High Salary Package</option>
-                                <option>Research &amp; Innovation</option>
-                                <option>Government / UPSC</option>
-                                <option>Entrepreneurship</option>
+                            <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Course
+                                Interest</label>
+                            <select id="contact-interest"
+                                class="w-full bg-slate-50 dark:bg-slate-900 border-none rounded-xl py-3.5 focus:ring-2 focus:ring-primary/20 text-slate-700 dark:text-slate-200 font-medium">
+                                <option>Engineering (B.Tech)</option>
+                                <option>Management (MBA)</option>
+                                <option>Medicine (MBBS)</option>
+                                <option>Law (LLB)</option>
+                                <option>Arts &amp; Humanities</option>
                             </select>
                         </div>
-                        <button id="find-career-btn"
-                            class="w-full bg-primary text-white font-extrabold py-4 rounded-xl shadow-xl hover:shadow-primary/30 transition-all flex items-center justify-center gap-2 shadow-orange-500/20 hover:bg-orange-600">
-                            Find My Career <span class="material-symbols-outlined">arrow_forward</span>
+                        <button id="contact-submit"
+                            class="w-full bg-primary text-white font-extrabold py-4 rounded-xl shadow-xl hover:bg-primary/90 transition-all shadow-orange-500/20 hover:bg-orange-600"
+                            type="submit">
+                            Get Call Back
                         </button>
-                    </div>
-                    <div id="wizard-results"
-                        class="hidden space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
-                        <div class="p-6 bg-slate-50 rounded-2xl border-2 border-primary/20">
-                            <p class="text-sm font-bold text-primary uppercase tracking-wider mb-2">Top Recommendation
-                            </p>
-                            <h4 id="result-title" class="text-2xl font-bold text-slate-900">Full Stack AI Developer</h4>
-                            <p id="result-desc" class="text-slate-600 mt-2">Based on your love for logic and science
-                                background, this role offers high growth and salary.</p>
+                        <p class="text-[10px] text-center text-slate-400">By clicking, you agree to our Terms and
+                            Privacy
+                            Policy.</p>
+                    </form>
+                    <div id="contact-success" class="hidden text-center py-8">
+                        <div
+                            class="size-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="material-symbols-outlined text-4xl">check_circle</span>
                         </div>
-                        <button id="reset-wizard"
-                            class="w-full py-3 text-slate-500 font-bold hover:text-primary transition-colors">Start
-                            Over</button>
+                        <h4 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Request Received!</h4>
+                        <p class="text-slate-600 dark:text-slate-400">An expert counselor will call you within 24 hours.
+                        </p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Top Exams -->
-    <section class="max-w-7xl mx-auto px-4 py-20">
-        <div class="flex justify-between items-center mb-10">
-            <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white">Upcoming Entrance Exams</h2>
-            <button class="text-primary font-bold">View Calendar</button>
-        </div>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- Exam Card -->
-            <div
-                class="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-lg transition-all">
-                <div class="flex items-start justify-between mb-6">
-                    <div
-                        class="size-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary font-black bg-secondary/10 text-secondary">
-                        JEE</div>
-                    <span class="px-3 py-1 bg-green-100 text-green-600 text-[10px] font-bold rounded-full">Open</span>
-                </div>
-                <h4 class="font-bold text-slate-900 dark:text-white mb-2">JEE Main 2025</h4>
-                <div class="space-y-3">
-                    <div class="flex items-center gap-2 text-xs text-slate-500">
-                        <span class="material-symbols-outlined text-sm">calendar_today</span> Jan 24 - Feb 01
-                    </div>
-                    <div class="flex items-center gap-2 text-xs text-slate-500">
-                        <span class="material-symbols-outlined text-sm">person</span> Class 12th (PCM)
-                    </div>
-                </div>
-                <button
-                    class="w-full mt-6 py-2.5 bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-white font-bold rounded-xl text-sm hover:bg-primary hover:text-white transition-all">Details</button>
-            </div>
-            <!-- Exam 2 -->
-            <div
-                class="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-lg transition-all">
-                <div class="flex items-start justify-between mb-6">
-                    <div class="size-12 bg-red-100 rounded-xl flex items-center justify-center text-red-600 font-black">
-                        NEET</div>
-                    <span class="px-3 py-1 bg-slate-100 text-slate-500 text-[10px] font-bold rounded-full">Closing
-                        Soon</span>
-                </div>
-                <h4 class="font-bold text-slate-900 dark:text-white mb-2">NEET UG 2025</h4>
-                <div class="space-y-3">
-                    <div class="flex items-center gap-2 text-xs text-slate-500">
-                        <span class="material-symbols-outlined text-sm">calendar_today</span> May 05, 2025
-                    </div>
-                    <div class="flex items-center gap-2 text-xs text-slate-500">
-                        <span class="material-symbols-outlined text-sm">person</span> Class 12th (PCB)
-                    </div>
-                </div>
-                <button
-                    class="w-full mt-6 py-2.5 bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-white font-bold rounded-xl text-sm hover:bg-primary hover:text-white transition-all">Details</button>
-            </div>
-            <!-- Exam 3 -->
-            <div
-                class="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-lg transition-all">
-                <div class="flex items-start justify-between mb-6">
-                    <div
-                        class="size-12 bg-purple-100 rounded-xl flex items-center justify-center text-purple-600 font-black">
-                        CAT</div>
-                    <span class="px-3 py-1 bg-green-100 text-green-600 text-[10px] font-bold rounded-full">Open</span>
-                </div>
-                <h4 class="font-bold text-slate-900 dark:text-white mb-2">CAT MBA 2024</h4>
-                <div class="space-y-3">
-                    <div class="flex items-center gap-2 text-xs text-slate-500">
-                        <span class="material-symbols-outlined text-sm">calendar_today</span> Nov 24, 2024
-                    </div>
-                    <div class="flex items-center gap-2 text-xs text-slate-500">
-                        <span class="material-symbols-outlined text-sm">person</span> Graduation Degree
-                    </div>
-                </div>
-                <button
-                    class="w-full mt-6 py-2.5 bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-white font-bold rounded-xl text-sm hover:bg-primary hover:text-white transition-all">Details</button>
-            </div>
-            <!-- Exam 4 -->
-            <div
-                class="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-lg transition-all">
-                <div class="flex items-start justify-between mb-6">
-                    <div
-                        class="size-12 bg-amber-100 rounded-xl flex items-center justify-center text-amber-600 font-black">
-                        CUET</div>
-                    <span class="px-3 py-1 bg-slate-100 text-slate-500 text-[10px] font-bold rounded-full">Coming
-                        Soon</span>
-                </div>
-                <h4 class="font-bold text-slate-900 dark:text-white mb-2">CUET UG 2025</h4>
-                <div class="space-y-3">
-                    <div class="flex items-center gap-2 text-xs text-slate-500">
-                        <span class="material-symbols-outlined text-sm">calendar_today</span> May 15 - May 31
-                    </div>
-                    <div class="flex items-center gap-2 text-xs text-slate-500">
-                        <span class="material-symbols-outlined text-sm">person</span> Class 12th Pass
-                    </div>
-                </div>
-                <button
-                    class="w-full mt-6 py-2.5 bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-white font-bold rounded-xl text-sm hover:bg-primary hover:text-white transition-all">Details</button>
-            </div>
-        </div>
-    </section>
-    <!-- Student Reviews -->
-    <section id="reviews" class="bg-slate-50 dark:bg-slate-900 py-20 px-4 overflow-hidden">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white text-center mb-16 italic">"A community of
-                learners, for learners"</h2>
-            <div class="flex gap-8 overflow-x-auto pb-8 snap-x no-scrollbar">
-                <!-- Testimonial 1 -->
-                <div class="snap-center shrink-0 w-[400px] glass-card p-8 rounded-3xl">
-                    <div class="flex gap-1 text-yellow-500 mb-6">
-                        <span class="material-symbols-outlined fill-current">star</span>
-                        <span class="material-symbols-outlined fill-current">star</span>
-                        <span class="material-symbols-outlined fill-current">star</span>
-                        <span class="material-symbols-outlined fill-current">star</span>
-                        <span class="material-symbols-outlined fill-current">star</span>
-                    </div>
-                    <p class="text-slate-700 dark:text-slate-300 mb-8 italic">"The career finder tool actually suggested
-                        paths I hadn't even considered. I'm now studying AI at IIT Madras and it's perfect."</p>
-                    <div class="flex items-center gap-4">
-                        <img alt="Avatar" class="size-12 rounded-full" data-alt="Satisfied student portrait"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg48YSHZyvZWFYEVFr0QmpN2FNcQtKymXiIU5dKEcfajoc9eAMGVOqb92o7JHFMMBm-VeFh8ISGD3ETV9acZxWYzi8g3B5cVPQOSrEh_tAk6KEWocc9b3ZJonkBZmqZiolnFOteYdHClz711qhzDtlQ_YiqIzQtniFq3kX022b3xX0q3rRgTxpctre7yYGzviMwFJfd0A7rmP9DVth1AaJjOIPgqbfm05alb23Wnow3jeAqIenoJFlxpryP8rstgIfOewII0GZl5fD" />
-                        <div>
-                            <h5 class="font-bold text-slate-900 dark:text-white">Arjun Sharma</h5>
-                            <p class="text-xs text-slate-500">B.Tech Student, IIT Madras</p>
+        </section>
+        <!-- Footer -->
+        <footer class="bg-slate-900 text-white pt-20 pb-10 px-4">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                    <div>
+                        <div class="flex items-center gap-2 mb-6">
+                            <div class="size-8 bg-secondary rounded flex items-center justify-center">
+                                <span class="material-symbols-outlined text-xl">school</span>
+                            </div>
+                            <span class="text-xl font-bold tracking-tight">EduPath</span>
                         </div>
-                    </div>
-                </div>
-                <!-- Testimonial 2 -->
-                <div class="snap-center shrink-0 w-[400px] glass-card p-8 rounded-3xl">
-                    <div class="flex gap-1 text-yellow-500 mb-6">
-                        <span class="material-symbols-outlined fill-current">star</span>
-                        <span class="material-symbols-outlined fill-current">star</span>
-                        <span class="material-symbols-outlined fill-current">star</span>
-                        <span class="material-symbols-outlined fill-current">star</span>
-                        <span class="material-symbols-outlined fill-current">star</span>
-                    </div>
-                    <p class="text-slate-700 dark:text-slate-300 mb-8 italic">"EduPath made the application process for
-                        multiple colleges so seamless. Saved me weeks of paperwork and stress."</p>
-                    <div class="flex items-center gap-4">
-                        <img alt="Avatar" class="size-12 rounded-full" data-alt="Student smiling for testimonial"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB765dDoojYytdstCMH-KjhIykOKQQMGyVEJY9JLhqdWybteqfMlnfgDQ77wS3P3QACP_Nh6afwoIofJIPLD0xEEFpNszio5LOzc1iEA9n5Gw0WzGHIzrj8kWjxk6paTVtGFC0eCasze7Sz0OeiWSXi348Ir3PxTX8tO4ZeIlV3tP_HQ0D3twsdu6Z-OvaPfBrFEVFck4q2B35Z0Nky7RRkcrkLEQfQByyi5RZ5ydCcd7OwfPcq7vWF2velBfnhQSClHucLujrvXPJV" />
-                        <div>
-                            <h5 class="font-bold text-slate-900 dark:text-white">Priya Patel</h5>
-                            <p class="text-xs text-slate-500">MBA aspirant, IIM A</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Testimonial 3 -->
-                <div class="snap-center shrink-0 w-[400px] glass-card p-8 rounded-3xl">
-                    <div class="flex gap-1 text-yellow-500 mb-6">
-                        <span class="material-symbols-outlined fill-current">star</span>
-                        <span class="material-symbols-outlined fill-current">star</span>
-                        <span class="material-symbols-outlined fill-current">star</span>
-                        <span class="material-symbols-outlined fill-current">star</span>
-                        <span class="material-symbols-outlined fill-current">star</span>
-                    </div>
-                    <p class="text-slate-700 dark:text-slate-300 mb-8 italic">"The college reviews from actual seniors
-                        helped me understand the ground reality before I took admission."</p>
-                    <div class="flex items-center gap-4">
-                        <img alt="Avatar" class="size-12 rounded-full" data-alt="Student profile photo"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKvMvIm0wZy0QSNPn2YCpVWb5taQDJoMAfb9vmKxh_ELEXuzakD4gVYaqq3JqWQIAgW8awpqUuewSXU08fIweN_4WyGgK9ol8WN4jgm9pBGmxsreneenS1Ph4hwRp-VwfBD-WKgyDAKj4PmgLsBahsN_PBgyz7viXpHQpVOVKnEI1mnBPtya4if83caIVSueK25sUWjCIop-hIqCIh0EFNAmYCmS78WGdv0B6vcBzvXXaPJOuwH3Zm6kGZVo1BUHgM_HYRZu9bIoBQ" />
-                        <div>
-                            <h5 class="font-bold text-slate-900 dark:text-white">Rahul Verma</h5>
-                            <p class="text-xs text-slate-500">Design Student, NID</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Lead Generation / Contact -->
-    <section id="contact-section" class="max-w-7xl mx-auto px-4 py-24">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-                <h2 class="text-4xl font-extrabold text-slate-900 dark:text-white mb-6">Speak with an Expert Counselor
-                </h2>
-                <p class="text-slate-600 dark:text-slate-400 text-lg mb-8">Get personalized guidance on college
-                    selection, scholarship eligibility, and career planning. It's 100% free.</p>
-                <div class="space-y-4">
-                    <div class="flex items-center gap-3">
-                        <span class="material-symbols-outlined text-primary">check_circle</span>
-                        <span class="font-medium text-slate-700 dark:text-slate-300">One-on-one video
-                            consultation</span>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <span class="material-symbols-outlined text-primary">check_circle</span>
-                        <span class="font-medium text-slate-700 dark:text-slate-300">Scholarship assistance up to ₹1
-                            Lakh</span>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <span class="material-symbols-outlined text-primary">check_circle</span>
-                        <span class="font-medium text-slate-700 dark:text-slate-300">Direct interaction with college
-                            alumni</span>
-                    </div>
-                </div>
-            </div>
-            <div
-                class="bg-white dark:bg-slate-800 rounded-[2rem] p-8 md:p-12 shadow-2xl border border-slate-100 dark:border-slate-700">
-                <form id="contact-form" class="space-y-5">
-                    <div class="grid md:grid-cols-2 gap-5">
-                        <div>
-                            <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Full
-                                Name</label>
-                            <input id="contact-name"
-                                class="w-full bg-slate-50 dark:bg-slate-900 border-none rounded-xl py-3.5 focus:ring-2 focus:ring-primary/20 text-slate-700 dark:text-slate-200"
-                                placeholder="John Doe" type="text" required />
-                        </div>
-                        <div>
-                            <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Phone
-                                Number</label>
-                            <input id="contact-phone"
-                                class="w-full bg-slate-50 dark:bg-slate-900 border-none rounded-xl py-3.5 focus:ring-2 focus:ring-primary/20 text-slate-700 dark:text-slate-200"
-                                placeholder="+91 98765 43210" type="tel" required />
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">India's leading education portal helping
+                            millions of students find their right path since 2012.</p>
+                        <div class="flex gap-4">
+                            <a class="size-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+                                href="#">
+                                <span class="material-symbols-outlined">social_leaderboard</span>
+                            </a>
+                            <a class="size-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+                                href="#">
+                                <span class="material-symbols-outlined">share</span>
+                            </a>
+                            <a class="size-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+                                href="#">
+                                <span class="material-symbols-outlined">alternate_email</span>
+                            </a>
                         </div>
                     </div>
                     <div>
-                        <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Course
-                            Interest</label>
-                        <select id="contact-interest"
-                            class="w-full bg-slate-50 dark:bg-slate-900 border-none rounded-xl py-3.5 focus:ring-2 focus:ring-primary/20 text-slate-700 dark:text-slate-200 font-medium">
-                            <option>Engineering (B.Tech)</option>
-                            <option>Management (MBA)</option>
-                            <option>Medicine (MBBS)</option>
-                            <option>Law (LLB)</option>
-                            <option>Arts &amp; Humanities</option>
-                        </select>
+                        <h5 class="font-bold mb-6 text-slate-100">Top Colleges</h5>
+                        <ul class="space-y-4 text-sm text-slate-400">
+                            <li><a class="hover:text-primary transition-colors" href="#">Engineering Colleges</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">MBA Colleges</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Medical Colleges</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Law Colleges</a></li>
+                        </ul>
                     </div>
-                    <button id="contact-submit"
-                        class="w-full bg-primary text-white font-extrabold py-4 rounded-xl shadow-xl hover:bg-primary/90 transition-all shadow-orange-500/20 hover:bg-orange-600"
-                        type="submit">
-                        Get Call Back
+                    <div>
+                        <h5 class="font-bold mb-6 text-slate-100">Top Exams</h5>
+                        <ul class="space-y-4 text-sm text-slate-400">
+                            <li><a class="hover:text-primary transition-colors" href="#">JEE Main</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">NEET</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">GATE</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">CAT</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="font-bold mb-6 text-slate-100">Contact Us</h5>
+                        <ul class="space-y-4 text-sm text-slate-400">
+                            <li class="flex gap-2">
+                                <span class="material-symbols-outlined text-sm">mail</span>
+                                info@edupath.com
+                            </li>
+                            <li class="flex gap-2">
+                                <span class="material-symbols-outlined text-sm">call</span>
+                                1800-EDUCATE-99
+                            </li>
+                            <li class="flex gap-2">
+                                <span class="material-symbols-outlined text-sm">location_on</span>
+                                Sector 62, Noida, India
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div
+                    class="pt-10 border-t border-slate-800 flex flex-col md:row justify-between items-center gap-6 text-slate-500 text-xs">
+                    <p>© 2024 EduPath Education Services Pvt. Ltd. All Rights Reserved.</p>
+                    <div class="flex gap-6">
+                        <a class="hover:text-white" href="#">Privacy Policy</a>
+                        <a class="hover:text-white" href="#">Terms of Use</a>
+                        <a class="hover:text-white" href="#">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Lead Generation Popup -->
+        <div id="lead-popup"
+            class="fixed inset-0 z-[100] flex items-center justify-center bg-slate-900/60 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
+            <div
+                class="relative w-full max-w-lg mx-4 bg-white dark:bg-slate-800 rounded-[2.5rem] p-8 md:p-12 shadow-2xl border border-slate-100 dark:border-slate-700 animate-in">
+                <!-- Close Button -->
+                <button id="close-popup"
+                    class="absolute top-6 right-6 p-2 text-slate-400 hover:text-primary transition-colors">
+                    <span class="material-symbols-outlined text-2xl">close</span>
+                </button>
+
+                <div class="text-center mb-8">
+                    <h3 class="text-3xl font-extrabold text-slate-900 dark:text-white mb-2">Unlock Your Future</h3>
+                    <p class="text-slate-500 dark:text-slate-400">Fill in your details and get a free career roadmap
+                        today!
+                    </p>
+                </div>
+
+                <form id="popup-form" class="space-y-4">
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <label
+                                class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2 ml-1 text-primary">Name</label>
+                            <input type="text" id="popup-name" required
+                                class="w-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl py-3.5 px-4 focus:ring-2 focus:ring-primary/20 text-slate-700 dark:text-slate-200"
+                                placeholder="Your Name">
+                        </div>
+                        <div>
+                            <label
+                                class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2 ml-1 text-primary">Email</label>
+                            <input type="email" id="popup-email" required
+                                class="w-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl py-3.5 px-4 focus:ring-2 focus:ring-primary/20 text-slate-700 dark:text-slate-200"
+                                placeholder="your@email.com">
+                        </div>
+                    </div>
+                    <div>
+                        <label
+                            class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2 ml-1 text-primary">Phone
+                            Number</label>
+                        <input type="tel" id="popup-phone" required
+                            class="w-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl py-3.5 px-4 focus:ring-2 focus:ring-primary/20 text-slate-700 dark:text-slate-200"
+                            placeholder="+91 XXXXX XXXXX">
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <label
+                                class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2 ml-1 text-primary">City</label>
+                            <input type="text" id="popup-city" required
+                                class="w-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl py-3.5 px-4 focus:ring-2 focus:ring-primary/20 text-slate-700 dark:text-slate-200"
+                                placeholder="Mumbai">
+                        </div>
+                        <div>
+                            <label
+                                class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2 ml-1 text-primary">State</label>
+                            <input type="text" id="popup-state" required
+                                class="w-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl py-3.5 px-4 focus:ring-2 focus:ring-primary/20 text-slate-700 dark:text-slate-200"
+                                placeholder="Maharashtra">
+                        </div>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-primary text-white font-extrabold py-4 rounded-xl shadow-xl hover:bg-orange-600 transition-all shadow-orange-500/20 mt-4">
+                        Get Career Roadmap
                     </button>
-                    <p class="text-[10px] text-center text-slate-400">By clicking, you agree to our Terms and Privacy
-                        Policy.</p>
                 </form>
-                <div id="contact-success" class="hidden text-center py-8">
+
+                <div id="popup-success" class="hidden text-center py-8">
                     <div
                         class="size-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
                         <span class="material-symbols-outlined text-4xl">check_circle</span>
                     </div>
-                    <h4 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Request Received!</h4>
-                    <p class="text-slate-600 dark:text-slate-400">An expert counselor will call you within 24 hours.</p>
+                    <h4 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Success!</h4>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm">Our expert will contact you shortly with your
+                        roadmap.</p>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- Footer -->
-    <footer class="bg-slate-900 text-white pt-20 pb-10 px-4">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-                <div>
-                    <div class="flex items-center gap-2 mb-6">
-                        <div class="size-8 bg-secondary rounded flex items-center justify-center">
-                            <span class="material-symbols-outlined text-xl">school</span>
-                        </div>
-                        <span class="text-xl font-bold tracking-tight">EduPath</span>
-                    </div>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-6">India's leading education portal helping
-                        millions of students find their right path since 2012.</p>
-                    <div class="flex gap-4">
-                        <a class="size-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
-                            href="#">
-                            <span class="material-symbols-outlined">social_leaderboard</span>
-                        </a>
-                        <a class="size-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
-                            href="#">
-                            <span class="material-symbols-outlined">share</span>
-                        </a>
-                        <a class="size-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
-                            href="#">
-                            <span class="material-symbols-outlined">alternate_email</span>
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <h5 class="font-bold mb-6 text-slate-100">Top Colleges</h5>
-                    <ul class="space-y-4 text-sm text-slate-400">
-                        <li><a class="hover:text-primary transition-colors" href="#">Engineering Colleges</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">MBA Colleges</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">Medical Colleges</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">Law Colleges</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h5 class="font-bold mb-6 text-slate-100">Top Exams</h5>
-                    <ul class="space-y-4 text-sm text-slate-400">
-                        <li><a class="hover:text-primary transition-colors" href="#">JEE Main</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">NEET</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">GATE</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">CAT</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h5 class="font-bold mb-6 text-slate-100">Contact Us</h5>
-                    <ul class="space-y-4 text-sm text-slate-400">
-                        <li class="flex gap-2">
-                            <span class="material-symbols-outlined text-sm">mail</span>
-                            info@edupath.com
-                        </li>
-                        <li class="flex gap-2">
-                            <span class="material-symbols-outlined text-sm">call</span>
-                            1800-EDUCATE-99
-                        </li>
-                        <li class="flex gap-2">
-                            <span class="material-symbols-outlined text-sm">location_on</span>
-                            Sector 62, Noida, India
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div
-                class="pt-10 border-t border-slate-800 flex flex-col md:row justify-between items-center gap-6 text-slate-500 text-xs">
-                <p>© 2024 EduPath Education Services Pvt. Ltd. All Rights Reserved.</p>
-                <div class="flex gap-6">
-                    <a class="hover:text-white" href="#">Privacy Policy</a>
-                    <a class="hover:text-white" href="#">Terms of Use</a>
-                    <a class="hover:text-white" href="#">Sitemap</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- Lead Generation Popup -->
-    <div id="lead-popup"
-        class="fixed inset-0 z-[100] flex items-center justify-center bg-slate-900/60 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
-        <div
-            class="relative w-full max-w-lg mx-4 bg-white dark:bg-slate-800 rounded-[2.5rem] p-8 md:p-12 shadow-2xl border border-slate-100 dark:border-slate-700 animate-in">
-            <!-- Close Button -->
-            <button id="close-popup"
-                class="absolute top-6 right-6 p-2 text-slate-400 hover:text-primary transition-colors">
-                <span class="material-symbols-outlined text-2xl">close</span>
-            </button>
 
-            <div class="text-center mb-8">
-                <h3 class="text-3xl font-extrabold text-slate-900 dark:text-white mb-2">Unlock Your Future</h3>
-                <p class="text-slate-500 dark:text-slate-400">Fill in your details and get a free career roadmap today!
-                </p>
-            </div>
-
-            <form id="popup-form" class="space-y-4">
-                <div class="grid md:grid-cols-2 gap-4">
-                    <div>
-                        <label
-                            class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2 ml-1 text-primary">Name</label>
-                        <input type="text" id="popup-name" required
-                            class="w-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl py-3.5 px-4 focus:ring-2 focus:ring-primary/20 text-slate-700 dark:text-slate-200"
-                            placeholder="Your Name">
-                    </div>
-                    <div>
-                        <label
-                            class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2 ml-1 text-primary">Email</label>
-                        <input type="email" id="popup-email" required
-                            class="w-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl py-3.5 px-4 focus:ring-2 focus:ring-primary/20 text-slate-700 dark:text-slate-200"
-                            placeholder="your@email.com">
-                    </div>
-                </div>
-                <div>
-                    <label
-                        class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2 ml-1 text-primary">Phone
-                        Number</label>
-                    <input type="tel" id="popup-phone" required
-                        class="w-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl py-3.5 px-4 focus:ring-2 focus:ring-primary/20 text-slate-700 dark:text-slate-200"
-                        placeholder="+91 XXXXX XXXXX">
-                </div>
-                <div class="grid md:grid-cols-2 gap-4">
-                    <div>
-                        <label
-                            class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2 ml-1 text-primary">City</label>
-                        <input type="text" id="popup-city" required
-                            class="w-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl py-3.5 px-4 focus:ring-2 focus:ring-primary/20 text-slate-700 dark:text-slate-200"
-                            placeholder="Mumbai">
-                    </div>
-                    <div>
-                        <label
-                            class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2 ml-1 text-primary">State</label>
-                        <input type="text" id="popup-state" required
-                            class="w-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl py-3.5 px-4 focus:ring-2 focus:ring-primary/20 text-slate-700 dark:text-slate-200"
-                            placeholder="Maharashtra">
-                    </div>
-                </div>
-                <button type="submit"
-                    class="w-full bg-primary text-white font-extrabold py-4 rounded-xl shadow-xl hover:bg-orange-600 transition-all shadow-orange-500/20 mt-4">
-                    Get Career Roadmap
-                </button>
-            </form>
-
-            <div id="popup-success" class="hidden text-center py-8">
-                <div
-                    class="size-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <span class="material-symbols-outlined text-4xl">check_circle</span>
-                </div>
-                <h4 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Success!</h4>
-                <p class="text-slate-600 dark:text-slate-400 text-sm">Our expert will contact you shortly with your
-                    roadmap.</p>
-            </div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+        <script src="script.js"></script>
 </body>
 
 </html>
